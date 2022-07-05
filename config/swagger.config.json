@@ -1,0 +1,41 @@
+{
+  "definition": {
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Proyecto Node",
+      "version": "1.0.0",
+      "description": "An example for node course in Escalab Academy",
+      "termsOfService": "http://example.com/terms/",
+      "contact": {
+        "name": "Api Support",
+        "url": "https://escalab.academy/",
+        "email": "fepipe82@hotmail.com"
+      },
+      "license": {
+        "name": "MIT",
+        "url": "https://opensource.org/licenses/MIT"
+      }
+    },
+    "servers": [
+      {
+        "url": "http://localhost:8080/api/",
+        "description": "My API Documentation Developer Server"
+      },
+      {
+        "url": "http://2562333345667899.aws.amazon.com",
+        "description": "Production Server"
+      }
+    ],
+    "security": [{ "ApiKey": [] }],
+    "components": {
+      "securitySchemes": {
+        "ApiKey": {
+          "type": "apiKey",
+          "in": "header",
+          "name": "x-token"
+        }
+      }
+    }
+  },
+  "apis": ["./routes/*.js"]
+}
